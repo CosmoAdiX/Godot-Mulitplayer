@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://cyoehvoaqpqhs"]
 
-[ext_resource type="Texture2D" uid="uid://dmdwmeqpqx2dh" path="res://resources/tiles.png" id="1_nnsk1"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e5uuo"]
+load_path = "res://.godot/imported/tiles.png-5ca9ef58e1bf63235e845fc19b6c00f9.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwgxs"]
-texture = ExtResource("1_nnsk1")
+texture = SubResource("CompressedTexture2D_e5uuo")
 texture_region_size = Vector2i(32, 32)
+use_texture_padding = false
+3:8/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4wyf3"]
+tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_rwgxs")
 
 [node name="world" type="Node2D" unique_id=785980129]
