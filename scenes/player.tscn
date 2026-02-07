@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://bxacxpyw5ve6j"]
 
 [ext_resource type="Texture2D" uid="uid://ce3sqf7gtu83f" path="res://resources/rogues.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://db81k28ow5hhv" path="res://scenes/player.gd" id="1_g2els"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 size = Vector2(32, 32)
 
-[node name="player" type="Node2D" unique_id=1644243491]
+[node name="player" type="CharacterBody2D" unique_id=205041572]
+script = ExtResource("1_g2els")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1327164438]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1594685095]
 texture = ExtResource("1_3vyb7")
 region_enabled = true
 region_rect = Rect2(64, 32, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332725045]
-shape = SubResource("RectangleShape2D_g2els")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1081466956]
+shape = SubResource("RectangleShape2D_qhqgy")
