@@ -25,5 +25,4 @@ func move(a) -> void:
 	
 func _physics_process(delta: float) -> void:
 	move(delta)
-	print(delta)
 	
