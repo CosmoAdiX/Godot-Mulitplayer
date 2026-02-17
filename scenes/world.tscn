@@ -240,3 +240,5 @@ zoom = Vector2(2, 2)
 
 [node name="player" parent="." unique_id=205041572 instance=ExtResource("1_nnsk1")]
 position = Vector2(156, 36)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=327729088]
