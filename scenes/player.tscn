@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://db81k28ow5hhv" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(32, 32)
+size = Vector2(22, 28)
 
 [node name="player" type="CharacterBody2D" unique_id=205041572]
 script = ExtResource("1_g2els")
@@ -15,4 +15,5 @@ region_enabled = true
 region_rect = Rect2(64, 32, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1081466956]
+position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_qhqgy")
