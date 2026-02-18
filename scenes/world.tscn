@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cyoehvoaqpqhs"]
 
+[ext_resource type="Script" uid="uid://368w8sfd6she" path="res://scenes/world.gd" id="1_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://bxacxpyw5ve6j" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://dmdwmeqpqx2dh" path="res://resources/tiles.png" id="1_rwgxs"]
 
@@ -229,6 +230,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nnsk1")
 
 [node name="world" type="Node2D" unique_id=785980129]
+script = ExtResource("1_4wyf3")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1191169481]
 tile_map_data = PackedByteArray("AAACAAMAAAABAAEAAAADAAMAAAABAAEAAAAEAAMAAAABAAEAAAAFAAMAAAABAAEAAAAHAAEAAAABAAEAAAAIAAEAAAABAAEAAAAJAAEAAAABAAEAAAAFAAUAAAABAAEAAAAGAAUAAAABAAEAAAAHAAUAAAABAAEAAAAIAAMAAAABAAEAAAAJAAMAAAABAAEAAAAKAAMAAAABAAEAAAADAAIAAAAAAAEAAAAJAAAAAAAAAAEAAAAHAAQAAAAAAAEAAAAKAAUAAAABAAIAAAALAAUAAAABAAIAAAAMAAUAAAABAAIAAAAMAAQAAAAAAAIAAAANAAUAAAABAAIAAAAOAAUAAAABAAIAAAABAAkAAAABAAIAAAACAAkAAAABAAIAAAADAAkAAAABAAIAAAAEAAkAAAABAAIAAAACAAgAAAAAAAIAAAACAAcAAAAAAAIAAAAGAAgAAAABAAQAAAAHAAgAAAABAAQAAAAIAAgAAAABAAQAAAAJAAgAAAABAAQAAAAKAAgAAAABAAQAAAAIAAcAAAAAAAQAAAAIAAYAAAAAAAQAAAAAAAUAAAABAAAAAAABAAUAAAABAAAAAAACAAUAAAABAAAAAAAMAAEAAAABAAAAAAANAAEAAAABAAAAAAAOAAEAAAABAAAAAAAPAAEAAAAAAAAAAAAPAAAAAAAAAAAAAAAPAAIAAAABAAAAAAA=")
@@ -242,3 +244,5 @@ zoom = Vector2(2, 2)
 position = Vector2(156, 36)
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=327729088]
+_spawnable_scenes = PackedStringArray("uid://bxacxpyw5ve6j")
+spawn_path = NodePath("..")
