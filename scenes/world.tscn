@@ -288,3 +288,6 @@ text = "Host"
 layout_mode = 2
 text = "join
 "
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/join" to="." method="_on_join_pressed"]
