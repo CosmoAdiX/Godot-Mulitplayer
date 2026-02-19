@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://db81k28ow5hhv" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(22, 28)
+size = Vector2(18, 27)
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_g2els"]
 properties/0/path = NodePath(".:position")
@@ -20,7 +20,7 @@ region_enabled = true
 region_rect = Rect2(64, 32, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1081466956]
-position = Vector2(2, 1)
+position = Vector2(4, 0.5)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=746644042]
