@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -350.0
 
+func _ready() -> void:
+	set_multiplayer_authority(int(str(name)))
 
 func move(a):
 	# Add the gravity.
@@ -24,6 +26,8 @@ func move(a):
 	move_and_slide()
 	
 func _physics_process(delta: float) -> void:
+	if not is_multiplayer_authority():
+		return
 	move(delta)
 	
 	

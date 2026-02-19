@@ -6,6 +6,7 @@ var port = 9992
 
 @onready var canvas1: CanvasLayer = $CanvasLayer
 
+
 func _on_host_pressed() -> void:
 	peer.create_server(port)
 	multiplayer.multiplayer_peer = peer
