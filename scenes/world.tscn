@@ -285,5 +285,7 @@ layout_mode = 2
 text = "join
 "
 
+[node name="Spawner" type="Node2D" parent="." unique_id=119012476]
+
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/join" to="." method="_on_join_pressed"]
