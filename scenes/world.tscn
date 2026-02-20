@@ -287,5 +287,8 @@ text = "join
 
 [node name="Spawner" type="Node2D" parent="." unique_id=119012476]
 
+[node name="spawner1" type="Marker2D" parent="Spawner" unique_id=1209337033]
+position = Vector2(161, 33)
+
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/join" to="." method="_on_join_pressed"]
