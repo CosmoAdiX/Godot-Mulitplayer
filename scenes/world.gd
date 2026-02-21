@@ -28,7 +28,6 @@ func _on_join_pressed() -> void:
 func peer_added(pid) -> void:
 	print('player ' + str(pid) + ' has joined!.')
 	var p1: CharacterBody2D = player.instantiate()
-	#p1.position = Vector2(20,-1)
 	p1.global_position = spawner.get_child(players.size()).global_position
 	players.append(p1)
 	p1.name = str(pid)
