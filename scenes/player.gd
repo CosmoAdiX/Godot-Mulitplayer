@@ -1,13 +1,15 @@
 class_name Player
 extends CharacterBody2D
 
-@onready var m_player: CharacterBody2D = $player
+@onready var av_sprite: Sprite2D = $Sprite2D
+@onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var orig_position_coll = collision.position.x
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -350.0
 
-
-var flipy: bool = true
+#func _process(delta):
+	#print(velocity)
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(int(str(name)))
@@ -24,13 +26,20 @@ func move(a):
 		
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
-	if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
-		scale.x = -1
+	if velocity.x > 0:
+		av_sprite.flip_h = true
+		collision.position.x = -orig_position_coll
+	if velocity.x < 0:
+		av_sprite.flip_h = false
+		collision.position.x = orig_position_coll
 	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	
+		
 
 	move_and_slide()
 	
